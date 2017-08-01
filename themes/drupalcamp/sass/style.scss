@@ -1,0 +1,178 @@
+// Default variables.
+@import "default-variables";
+
+// Bootstrap Framework.
+@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+@import 'overrides';
+
+body {
+	background: #333;
+	margin-top: 0;
+	font-family: 'Bebas Neue';
+	color: #fff;
+
+	*:focus {
+		background-color: transparent;
+	}
+
+	/* Header */
+		.navbar.container {
+			width: 100%;
+		    max-width: 100%;
+		    background: #1B1C1D;
+		    border: none;
+		    .navbar-header {
+		    	width: 100%;
+		    	max-width: 100%;
+		    	.region-navigation {
+		    		.logo {
+		    			img {
+		    				width: 30px;
+		    				height: auto;
+		    			}
+		    		}
+			    	.navbar-brand {
+			    		color: #fff;
+			    		font-size: 30px;
+			    	}
+
+			    	#block-drupalcamp-main-menu {
+			    		float: right;
+			    		a {
+			    			color: #fff;
+			    			font-size: 20px;
+			    			background: transparent !important;
+			    		}
+			    		.dropdown-menu {
+			    			background-color: #000;
+			    		}
+			    	}
+			    }
+			}
+		}
+	/**/
+
+	/** Front page **/
+		&.path-frontpage {
+			background: url('../images/tel_aviv_8_1.jpg') no-repeat;
+			background-size: cover;
+			height: 100vh;
+			.region-content {
+				display: flex;
+				flex-wrap: wrap;
+				h1 {
+					border: none;
+					font-size: 190px;
+					color: #fff;
+					text-align: center;
+					margin: 15% auto 0;
+				}
+				article {
+					margin: 0 auto;
+					.field--name-body {
+						font-size: 95px;
+		    			color: #fff;
+					}
+				}
+			}
+		}
+	/**/
+
+	/** Inner pagers **/
+		.page-header {
+			font-size: 70px;
+			text-align: center;
+			color: #00ccdb;
+			margin-top: 10%
+		}
+
+		.field--name-body {
+			font-family: 'Vista';
+			font-size: 20px;
+    		line-height: 1.5;
+		}
+
+		#block-webform {
+			label,
+			.fieldset-legend {
+				font-family: 'Vista';
+			    font-size: 20px;
+			    line-height: 1.5;
+			    color: #00ccdb;
+			}
+		}
+	/**/
+}
+
+
+/** Mobile **/
+	@media screen and (max-width: 768px) { 
+		body {
+
+			/* Header */
+				.navbar.container {
+				    .navbar-header {
+				    	.region-navigation {
+				    		.responsive-menus {
+				    			position: static !important;
+				    			.toggler {
+				    				position: absolute;
+								    top: 6px;
+								    right: 12px;
+								    font-size: 2em;
+								    background: transparent;
+								    box-shadow: none;
+								}
+				    		}
+					    }
+					}
+				}
+			/**/
+
+			/** Front page **/
+				&.path-frontpage {
+					.region-content {
+						h1 {
+							font-size: 5em;
+							margin: 15% auto 0;
+						}
+						article {
+							margin: 0 auto;
+							.field--name-body {
+								font-size: 45px;
+							}
+						}
+					}
+				}
+			/**/
+
+			/** Inner pagers **/
+				.page-header {
+					font-size: 70px;
+					text-align: center;
+					color: #00ccdb;
+					margin-top: 10%
+				}
+
+				.field--name-body {
+					iframe {
+						width: 100%;
+						height: auto;
+					}
+				}
+
+				#block-webform {
+					label,
+					.fieldset-legend {
+						font-family: 'Vista';
+					    font-size: 20px;
+					    line-height: 1.5;
+					    color: #00ccdb;
+					}
+				}
+			/**/
+		}	
+	}
+/**/
